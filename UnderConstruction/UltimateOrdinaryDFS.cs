@@ -21,8 +21,9 @@ namespace UnderConstruction
     /// </summary>
     public class UltimateOrdinaryDepthFirstSearchThatYouHaveNeverSeenBeforeInYourEntireLimitationOfLife
     {
-        private static readonly Dictionary<int, List<int>> _adjacentDictionaryThatContainsRidiculouslyImportantData =
-            new();
+        private static readonly Dictionary<int, List<int>>
+            _adjacentDictionaryThatContainsWhereWeWillGoingToReachesTheEndOfMostLongestVoyageBelongsToTheUltimateOrdinalDepthFirstSearch =
+                new();
 
         private static readonly List<string>
             _routeListThatWeHaveBeenPassedOutFromUltimateOrdinalDepthFirstSearchThatYouHaveNeverSeenBeforeInYourLife =
@@ -30,42 +31,50 @@ namespace UnderConstruction
 
         private static void Main()
         {
-            var inputThatComeFromReadLine = Console.ReadLine();
-            if (inputThatComeFromReadLine != "")
+            var inputThatComeFromCommandLineInterfaceOfReadLine = Console.ReadLine();
+            if (inputThatComeFromCommandLineInterfaceOfReadLine != "")
             {
                 Console.WriteLine("Invalid input");
                 return;
             }
 
-            var numbersThatConvertedFromInput = Array.ConvertAll(inputThatComeFromReadLine.Split(), int.Parse);
+            var numbersThatConvertedFromInput =
+                Array.ConvertAll(inputThatComeFromCommandLineInterfaceOfReadLine.Split(), int.Parse);
 
-            (int countOfVerticesThatGivenFromAfterInputs, int pointOfStartAlsoConsideredAsBeginning,
+            (int countOfVerticesThatGivenFromAfterInputs, int pointOfStartAlsoConsideredAsBeginningOfMostLargestVoyage,
                 int pointOfGoalAlsoConsideredAsTermination) = (numbersThatConvertedFromInput[0],
                 numbersThatConvertedFromInput[1], numbersThatConvertedFromInput[2]);
 
-            for (int indexOfForLoop = 1; indexOfForLoop <= countOfVerticesThatGivenFromAfterInputs; indexOfForLoop++)
+            for (int indexOfForLoopThatRepeatsUntilItReachesCountOfVerticesThatGivenFromInput = 1;
+                 indexOfForLoopThatRepeatsUntilItReachesCountOfVerticesThatGivenFromInput <=
+                 countOfVerticesThatGivenFromAfterInputs;
+                 indexOfForLoopThatRepeatsUntilItReachesCountOfVerticesThatGivenFromInput++)
             {
                 // 頂点個数が渡されるが不要なので飛ばす。
                 Console.ReadLine();
-                var inputThatComeFromReadLineEx = Console.ReadLine();
-                if (inputThatComeFromReadLine != "")
+                var inputThatComeFromCommandLineInterfaceOfReadLineEx = Console.ReadLine();
+                if (inputThatComeFromCommandLineInterfaceOfReadLineEx != "")
                 {
                     Console.WriteLine("Invalid input");
                     return;
                 }
 
-                var verticesInformationOfArray = Array.ConvertAll(inputThatComeFromReadLineEx.Split(), int.Parse);
+                var verticesInformationOfArrayThatTakesFromInputThatComesFromReadLine =
+                    Array.ConvertAll(inputThatComeFromCommandLineInterfaceOfReadLineEx.Split(), int.Parse);
 
                 // キーを頂点、値をその頂点に隣接した別の頂点として保存。
-                _adjacentDictionaryThatContainsRidiculouslyImportantData.Add(indexOfForLoop,
-                    [..verticesInformationOfArray]);
+                _adjacentDictionaryThatContainsWhereWeWillGoingToReachesTheEndOfMostLongestVoyageBelongsToTheUltimateOrdinalDepthFirstSearch
+                    .Add(
+                        indexOfForLoopThatRepeatsUntilItReachesCountOfVerticesThatGivenFromInput,
+                        [..verticesInformationOfArrayThatTakesFromInputThatComesFromReadLine]);
             }
 
-            var pathOfStackWhereWeAraLeadingToTheEndOfTermination = new Stack<int>();
-            pathOfStackWhereWeAraLeadingToTheEndOfTermination.Push(pointOfStartAlsoConsideredAsBeginning);
-            TheUltimateOrdinalDepthFirstSearchThatYouHaveNeverSeenBeforeInYourLife(
-                pathOfStackWhereWeAraLeadingToTheEndOfTermination,
-                pointOfStartAlsoConsideredAsBeginning,
+            var pathOfStackWhereWeAraLeadingToTheEndOfTerminationOfMostLargestVoyage = new Stack<int>();
+            pathOfStackWhereWeAraLeadingToTheEndOfTerminationOfMostLargestVoyage.Push(
+                pointOfStartAlsoConsideredAsBeginningOfMostLargestVoyage);
+            ExecutesTheUltimateOrdinalDepthFirstSearchThatYouHaveNeverSeenBeforeInYourLife(
+                pathOfStackWhereWeAraLeadingToTheEndOfTerminationOfMostLargestVoyage,
+                pointOfStartAlsoConsideredAsBeginningOfMostLargestVoyage,
                 pointOfGoalAlsoConsideredAsTermination);
             Console.WriteLine(
                 _routeListThatWeHaveBeenPassedOutFromUltimateOrdinalDepthFirstSearchThatYouHaveNeverSeenBeforeInYourLife
@@ -80,40 +89,46 @@ namespace UnderConstruction
         /// <summary>
         /// 深度優先探索を行う。
         /// </summary>
-        /// <param name="pathOfStackWhereWeAreCurrentlyLeadingToTheEndOfTermination">現在の進行ルート</param>
-        /// <param name="pointOfStartThatBeginningOfDepthFirstSearch">探索の開始地点</param>
-        /// <param name="pointOfEndThatTerminationOfDepthFirstSearch">探索の終了地点</param>
-        private static void TheUltimateOrdinalDepthFirstSearchThatYouHaveNeverSeenBeforeInYourLife(
-            Stack<int> pathOfStackWhereWeAreCurrentlyLeadingToTheEndOfTermination,
-            int pointOfStartThatBeginningOfDepthFirstSearch,
-            int pointOfEndThatTerminationOfDepthFirstSearch)
+        /// <param name="pathOfStackWhereWeAreCurrentlyLeadingToTheEndOfTerminationFromPointOfBeginning">現在の進行ルート</param>
+        /// <param name="pointOfStartThatBeginningOfTheUltimateOrdinalDepthFirstSearchThatYouHaveNeverSeenBeforeInYourLife">探索の開始地点</param>
+        /// <param name="pointOfEndThatTerminationOfTheUltimateOrdinalDepthFirstSearchThatYouHaveNeverSeenBeforeInYourLife">探索の終了地点</param>
+        private static void ExecutesTheUltimateOrdinalDepthFirstSearchThatYouHaveNeverSeenBeforeInYourLife(
+            Stack<int> pathOfStackWhereWeAreCurrentlyLeadingToTheEndOfTerminationFromPointOfBeginning,
+            int pointOfStartThatBeginningOfTheUltimateOrdinalDepthFirstSearchThatYouHaveNeverSeenBeforeInYourLife,
+            int pointOfEndThatTerminationOfTheUltimateOrdinalDepthFirstSearchThatYouHaveNeverSeenBeforeInYourLife)
         {
-            foreach (int currentVertexThatWeAreAt
-                     in _adjacentDictionaryThatContainsRidiculouslyImportantData[
-                         pointOfStartThatBeginningOfDepthFirstSearch])
+            foreach (int currentVertexWhereWeAreAtFromTheMostLargestVoyage
+                     in _adjacentDictionaryThatContainsWhereWeWillGoingToReachesTheEndOfMostLongestVoyageBelongsToTheUltimateOrdinalDepthFirstSearch
+                     [
+                         pointOfStartThatBeginningOfTheUltimateOrdinalDepthFirstSearchThatYouHaveNeverSeenBeforeInYourLife])
             {
-                if (!pathOfStackWhereWeAreCurrentlyLeadingToTheEndOfTermination.Contains(currentVertexThatWeAreAt))
+                if (!pathOfStackWhereWeAreCurrentlyLeadingToTheEndOfTerminationFromPointOfBeginning.Contains(
+                        currentVertexWhereWeAreAtFromTheMostLargestVoyage))
                 {
                     // 次の探索候補をスタックに入れる。
-                    pathOfStackWhereWeAreCurrentlyLeadingToTheEndOfTermination.Push(currentVertexThatWeAreAt);
+                    pathOfStackWhereWeAreCurrentlyLeadingToTheEndOfTerminationFromPointOfBeginning.Push(
+                        currentVertexWhereWeAreAtFromTheMostLargestVoyage);
 
-                    if (currentVertexThatWeAreAt == pointOfEndThatTerminationOfDepthFirstSearch)
+                    if (currentVertexWhereWeAreAtFromTheMostLargestVoyage ==
+                        pointOfEndThatTerminationOfTheUltimateOrdinalDepthFirstSearchThatYouHaveNeverSeenBeforeInYourLife)
                     {
                         // 候補がゴールの場合、ルートを記録。
                         _routeListThatWeHaveBeenPassedOutFromUltimateOrdinalDepthFirstSearchThatYouHaveNeverSeenBeforeInYourLife
                             .Add(string.Join(" ",
-                                pathOfStackWhereWeAreCurrentlyLeadingToTheEndOfTermination.Reverse()));
+                                pathOfStackWhereWeAreCurrentlyLeadingToTheEndOfTerminationFromPointOfBeginning
+                                    .Reverse()));
                     }
                     else
                     {
                         // ゴール出ない場合は、移動して探索を再開。
-                        TheUltimateOrdinalDepthFirstSearchThatYouHaveNeverSeenBeforeInYourLife(
-                            pathOfStackWhereWeAreCurrentlyLeadingToTheEndOfTermination, currentVertexThatWeAreAt,
-                            pointOfEndThatTerminationOfDepthFirstSearch);
+                        ExecutesTheUltimateOrdinalDepthFirstSearchThatYouHaveNeverSeenBeforeInYourLife(
+                            pathOfStackWhereWeAreCurrentlyLeadingToTheEndOfTerminationFromPointOfBeginning,
+                            currentVertexWhereWeAreAtFromTheMostLargestVoyage,
+                            pointOfEndThatTerminationOfTheUltimateOrdinalDepthFirstSearchThatYouHaveNeverSeenBeforeInYourLife);
                     }
 
                     // 探索を終えたので、スタックから取り除く。
-                    pathOfStackWhereWeAreCurrentlyLeadingToTheEndOfTermination.Pop();
+                    pathOfStackWhereWeAreCurrentlyLeadingToTheEndOfTerminationFromPointOfBeginning.Pop();
                 }
             }
 
